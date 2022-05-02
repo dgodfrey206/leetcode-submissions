@@ -1,10 +1,12 @@
 class Solution {
 public:
     string reversePrefix(string word, char ch) {
-        int pos = word.find(ch);
-        if (pos == string::npos)
-            return word;
-        reverse(word.begin(), word.begin() + pos + 1);
-        return word;
+       for (int i = 0; i < word.size(); i++) {
+           if (word[i] == ch) {
+               reverse(word.begin(), word.begin() + i + 1);
+               return word;
+           }
+       }
+       return word;
     }
 };
