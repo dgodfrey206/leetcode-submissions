@@ -6,10 +6,8 @@ public:
         for (int i = s.size() - 1; i >= 0; i--) {
             if (isalnum(s[i])) {
                 res += toupper(s[i]);
-                count++;
-                if (count % k == 0) {
+                if (++count % k == 0) 
                     res += "-";
-                }
             }
         }
         if (res.back() == '-') res.pop_back();
