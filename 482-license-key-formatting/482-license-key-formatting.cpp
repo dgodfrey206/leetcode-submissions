@@ -7,7 +7,7 @@ public:
             if (isalnum(s[i])) {
                 res += toupper(s[i]);
                 count++;
-                if (count % k == 0 && i > -1) {
+                if (count % k == 0) {
                     res += "-";
                 }
             }
