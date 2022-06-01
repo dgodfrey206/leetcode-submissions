@@ -4,8 +4,7 @@ public:
         int ans = INT_MIN;
         int sum = 0;
         for (int i = 0; i < nums.size(); i++) {
-            sum += nums[i];
-            sum = max(sum, nums[i]);
+            sum = max(sum + nums[i], nums[i]);
             ans = max(ans, sum);
         }
         return ans;
